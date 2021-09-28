@@ -1,0 +1,21 @@
+
+body {
+    background-color: rgb(65, 65, 65);
+    background-image: url("./images/me0.jpg");
+    background-size:cover;
+}
+
+h1 {
+    text-align: center;
+    color:white;
+    background-color: rgba(0, 0, 0, 0.74);
+    font-size: 64px;
+    font-style: bold;
+}
+
+header {
+    text-align: center;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.74);
+    font-size: 40px;
+}
