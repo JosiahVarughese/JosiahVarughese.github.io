@@ -1,0 +1,124 @@
+* {
+    box-sizing: border-box;
+    display: block;
+    text-align: center;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 0;
+    border-width: 0;
+    color: $main-text-color;
+}
+
+h1, h2 {
+    font-size: 50px;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+title, button, a, li {
+    font-size: 12px;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+p, h3 {
+    font-size: 14px;
+    font-weight: normal;
+    font-family: serif;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+body {
+    width: 700px;
+    height: auto;
+    background-color: $background-image-placeholder;
+}
+
+title {
+    display: inline-block;
+    color: $main-background-color;
+    font-size: 18px;
+    padding: 12px;
+    margin: 40px auto;
+    border: 5px solid $main-background-border-color;
+}
+
+nav ul {
+    text-align: left;
+    background-color: $nav-background-color;
+}
+
+nav ul li {
+    margin: 0;
+    display: inline-block;
+    padding: 20px;
+}
+
+nav ul li:first-child {
+    background-color: $main-background-color;
+}
+
+nav ul li:not(:first-child) {
+    color: $main-background-color;
+}
+
+.main {
+    background-color: $main-background-color;
+}
+
+.content-block article {
+    padding: 50px;
+    border-color: $main-background-border-color;
+    border-style: solid;
+}
+
+.content-block h1 {
+    font-size: 50px;
+}
+
+.content-block h3 {
+    font-size: 12px;
+}
+
+.content-block p {
+    padding: 30px 0;
+    overflow: hidden;
+}
+
+.featured article {
+    width: 100%;
+    border-bottom: 2px solid $main-background-border-color;
+}
+
+.other {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.other article {
+    min-width: 50%;
+    max-width: 50%;
+}
+
+.other h2 {
+    font-size: 30px;
+    padding-bottom: 20px;
+}
+
+.other p {
+    max-height: 120px;
+}
+
+.content-block img {
+    width: 100%;
+}
+
+.content-block button {
+    padding: 10px 40px;
+    margin: 30px auto 0;
+    border: 3px solid $main-text-color;
+    background-color: $main-background-color;
+}
