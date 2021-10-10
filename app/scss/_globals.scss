@@ -10,7 +10,7 @@
 }
 
 h1, h2 {
-    font-size: 50px;
+    font-size: 55px;
     font-weight: bold;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -22,7 +22,7 @@ title, button, a, li {
 }
 
 p, h3 {
-    font-size: 14px;
+    font-size: 18px;
     font-weight: normal;
     font-family: serif;
 }
@@ -32,23 +32,17 @@ ol, ul {
 }
 
 body {
-    width: 700px;
+    width: 1050px;
     height: auto;
     background-color: $background-image-placeholder;
-    background-image: url(/images/DSC_0234.jpg);
-    background-size: 200%;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-position-x: 85%; 
-    background-position-y: 100%;
 }
 
 title {
     display: inline-block;
     color: $main-background-color;
-    font-size: 18px;
+    font-size: 30px;
     padding: 12px;
-    margin: 40px auto;
+    margin: 60px auto;
     border: 5px solid $main-background-color;
 }
 
@@ -76,21 +70,19 @@ nav ul li:not(:first-child) {
 }
 
 .content-block article {
-    padding: 50px;
+    padding: 60px;
     border-color: $main-background-border-color;
     border-style: solid;
 }
 
-.content-block h1 {
-    font-size: 50px;
-}
-
 .content-block h3 {
-    font-size: 12px;
+    padding-bottom: 60px;
 }
 
 .content-block p {
     padding: 30px 0;
+    line-height: 2;
+    font-style: italic;
     overflow: hidden;
 }
 
@@ -111,6 +103,11 @@ nav ul li:not(:first-child) {
 
 .other h2 {
     font-size: 30px;
+    padding-bottom: 30px;
+}
+
+.other h3 {
+    font-size: 16px;
     padding-bottom: 20px;
 }
 
@@ -118,13 +115,24 @@ nav ul li:not(:first-child) {
     max-height: 120px;
 }
 
-.content-block img {
+.img {
+    background-color: $background-image-placeholder;
+    opacity: 100%;
     width: 100%;
 }
 
+.featured .img {
+    height: 600px;
+}
+
+.other .img {
+    height: 300px;
+}
+
 .content-block button {
-    padding: 10px 40px;
+    font-size: 12px;
+    padding: 18px 48px;
     margin: 30px auto 0;
-    border: 3px solid $main-text-color;
+    border: 2px solid $main-text-color;
     background-color: $main-background-color;
 }
