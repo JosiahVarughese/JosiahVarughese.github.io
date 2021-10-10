@@ -38,6 +38,12 @@ body {
   width: 700px;
   height: auto;
   background-color: black;
+  background-image: url(/images/DSC_0234.jpg);
+  background-size: 200%;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position-x: 85%;
+  background-position-y: 100%;
 }
 
 title {
@@ -46,7 +52,7 @@ title {
   font-size: 18px;
   padding: 12px;
   margin: 40px auto;
-  border: 5px solid rgba(0, 0, 0, 0.1);
+  border: 5px solid white;
 }
 
 nav ul {
