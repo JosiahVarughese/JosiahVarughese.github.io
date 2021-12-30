@@ -32,9 +32,14 @@ ol, ul {
 }
 
 body {
-    width: 1050px;
+    width: 80%;
     height: auto;
     background-color: $background-image-placeholder;
+    background-image: url('/images/bg.jpg');
+    background-size: 100%;
+    background-position: center top 35%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 title {
@@ -135,4 +140,16 @@ nav ul li:not(:first-child) {
     margin: 30px auto 0;
     border: 2px solid $main-text-color;
     background-color: $main-background-color;
+}
+
+.hide-for-mobile {
+    @include breakpoint-down(medium) {
+        display: none;
+    }
+}
+
+.hide-for-desktop {
+    @include breakpoint-up(large) {
+        display: none;
+    }
 }
