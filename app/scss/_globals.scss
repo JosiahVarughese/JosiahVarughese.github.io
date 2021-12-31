@@ -6,140 +6,93 @@
     margin: 0 auto;
     padding: 0;
     border-width: 0;
-    color: $main-text-color;
+    border-style: solid;
+    border-color: $whitish;
+    color: $whitish;
 }
 
-h1, h2 {
-    font-size: 55px;
-    font-weight: bold;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+html {
+    background-color: magenta;
 }
 
-title, button, a, li {
-    font-size: 12px;
-    font-weight: bold;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-p, h3 {
-    font-size: 18px;
-    font-weight: normal;
-    font-family: serif;
-}
-
-ol, ul {
-    list-style: none;
+head {
+    display: none;
 }
 
 body {
-    width: 80%;
-    height: auto;
-    background-color: $background-image-placeholder;
-    background-image: url('/images/bg.jpg');
+    position:absolute;
+    background-color: black;
+    size: 100% auto;
+    background-image: url('/images/bg2.jpg');
     background-size: 100%;
-    background-position: center top 35%;
+    background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
 
-title {
+header {
+    display: block;
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    padding: 20px 10px 100%;
+    background: linear-gradient($darkBlurpleTransparent, transparent);
+}
+
+.buttons {
+    float: right;
+    display: inline;
+    align-items: right;
+    text-align: right;
+}
+
+.buttons li {
     display: inline-block;
-    color: $main-background-color;
-    font-size: 30px;
-    padding: 12px;
-    margin: 60px auto;
-    border: 5px solid $main-background-color;
+    font-size: 14px;
+    padding: 4px 12px;
+    margin: 0 5px;
+    border-width: 2px;
+    border-radius: 15px;
+    //background: linear-gradient($mintLime, $purple);
 }
 
-nav ul {
-    text-align: left;
-    background-color: $nav-background-color;
-}
-
-nav ul li {
-    margin: 0;
-    display: inline-block;
-    padding: 20px;
-}
-
-nav ul li:first-child {
-    background-color: $main-background-color;
-}
-
-nav ul li:not(:first-child) {
-    color: $main-background-color;
+.logo {
+    display: inline;    
+    font-size: 16px;
+    padding: 4px;
+    border-width: 2px;
+    float: left;
 }
 
 .main {
-    background-color: $main-background-color;
+    margin-top: 300px;
+    width: 90%;
+    height: 800px;
 }
 
-.content-block article {
-    padding: 60px;
-    border-color: $main-background-border-color;
-    border-style: solid;
-}
-
-.content-block h3 {
-    padding-bottom: 60px;
-}
-
-.content-block p {
-    padding: 30px 0;
-    line-height: 2;
-    font-style: italic;
-    overflow: hidden;
-}
-
-.featured article {
-    width: 100%;
-    border-bottom: 2px solid $main-background-border-color;
-}
-
-.other {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.other article {
-    min-width: 50%;
-    max-width: 50%;
-}
-
-.other h2 {
+.main h1 {
+    font-weight: bold;
     font-size: 30px;
-    padding-bottom: 30px;
+    border-width: 3px;
+    border-radius: 30px;
+    padding: 18px 10px;
 }
 
-.other h3 {
-    font-size: 16px;
-    padding-bottom: 20px;
-}
-
-.other p {
-    max-height: 120px;
-}
-
-.img {
-    background-color: $background-image-placeholder;
-    opacity: 100%;
+.blocks {
+    display: block;
     width: 100%;
+    height: 400px;
+    margin-top: 10px;
 }
 
-.featured .img {
-    height: 600px;
-}
-
-.other .img {
-    height: 300px;
-}
-
-.content-block button {
-    font-size: 12px;
-    padding: 18px 48px;
-    margin: 30px auto 0;
-    border: 2px solid $main-text-color;
-    background-color: $main-background-color;
+.info_block {
+    display: inline-block;
+    //background-color: $whitish;
+    border-width: 3px;
+    border-radius: 30px;
+    width: 325px;
+    height: 325px;
+    margin: 10px 10px;
 }
 
 .hide-for-mobile {
