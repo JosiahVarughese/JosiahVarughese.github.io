@@ -1,20 +1,10 @@
-* {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  display: block;
-  text-align: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin: 0 auto;
-  padding: 0;
-  border-width: 0;
-  border-style: solid;
-  border-color: white;
-  color: white;
+@-ms-viewport {
+  width: device-width;
 }
 
 html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   background-color: magenta;
 }
 
@@ -23,80 +13,25 @@ head {
 }
 
 body {
-  position: absolute;
-  background-color: black;
-  size: 100% auto;
-  background-image: url("/images/bg2.jpg");
-  background-size: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-}
-
-header {
-  display: block;
+  -ms-overflow-style: scrollbar;
   width: 100%;
-  height: 100px;
-  position: fixed;
-  padding: 20px 10px 100%;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(7, 21, 53, 0.579)), to(transparent));
-  background: linear-gradient(rgba(7, 21, 53, 0.579), transparent);
+  height: 100%;
 }
 
-.buttons {
-  float: right;
-  display: inline;
-  -webkit-box-align: right;
-      -ms-flex-align: right;
-          align-items: right;
-  text-align: right;
-}
-
-.buttons li {
-  display: inline-block;
-  font-size: 14px;
-  padding: 4px 12px;
-  margin: 0 5px;
-  border-width: 2px;
-  border-radius: 15px;
-}
-
-.logo {
-  display: inline;
-  font-size: 16px;
-  padding: 4px;
-  border-width: 2px;
-  float: left;
-}
-
-.main {
-  margin-top: 300px;
-  width: 90%;
-  height: 800px;
-}
-
-.main h1 {
-  font-weight: bold;
-  font-size: 30px;
-  border-width: 3px;
-  border-radius: 30px;
-  padding: 18px 10px;
-}
-
-.blocks {
-  display: block;
-  width: 100%;
-  height: 400px;
-  margin-top: 10px;
-}
-
-.info_block {
-  display: inline-block;
-  border-width: 3px;
-  border-radius: 30px;
-  width: 325px;
-  height: 325px;
-  margin: 10px 10px;
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: 'Courier New', Courier, monospace;
+  border-width: 0;
+  border-style: solid;
+  border-color: white;
+  color: white;
 }
 
 @media (max-width: 63.9375em) {
@@ -109,5 +44,106 @@ header {
   .hide-for-desktop {
     display: none;
   }
+}
+
+#wrapper {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+#wrapper > .bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  background-image: url("/images/bg2.jpg");
+  background-size: 100% auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  z-index: -1;
+}
+
+#wrapper > .bg.fixed {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+}
+
+header {
+  display: block;
+  width: 100%;
+  height: 30%;
+  position: fixed;
+  padding: 20px 10px 20px;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(7, 21, 53, 0.579)), to(transparent));
+  background: linear-gradient(rgba(7, 21, 53, 0.579), transparent);
+}
+
+.links {
+  display: inline;
+  float: right;
+  text-align: right;
+}
+
+.logo {
+  float: left;
+  word-spacing: -4px;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 14px;
+  padding: 3px 8px;
+  margin: 0 5px;
+  border-width: 1.5px;
+  border-radius: 15px;
+}
+
+#main {
+  margin-top: 300px;
+}
+
+#main > h1 {
+  width: 80%;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  font-weight: bold;
+  font-size: 20px;
+  margin: 0 auto 50px;
+}
+
+#main > .posts {
+  display: inline-block;
+}
+
+#main > .posts .post {
+  margin-top: 20px;
+  display: inline-block;
+}
+
+#main > .posts .post h2 {
+  font-size: 24px;
+  text-decoration: underline;
+}
+
+#main > .posts .post div {
+  max-width: 30%;
+  min-width: 300px;
+  min-height: 300px;
+  width: 100%;
+  margin: 10px 10px;
+  background-color: #447379;
+}
+
+#main > h1, #main .posts .post div {
+  border-radius: 30px;
+  border-width: 2px;
+  padding: 18px 10px;
 }
 /*# sourceMappingURL=style.css.map */

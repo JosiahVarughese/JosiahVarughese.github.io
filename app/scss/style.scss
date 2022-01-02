@@ -1,3 +1,8 @@
-@import 'variables';
 @import 'mixins';
-@import 'globals';
+@import 'variables';
+
+@import 'page';
+
+@import 'Layout/wrapper';
+@import 'Layout/header';
+@import 'Layout/main'

@@ -1,0 +1,40 @@
+#main {
+    margin-top: 300px;
+
+    > h1 {
+        width: 80%;
+        max-width: max-content;
+        font-weight: bold;
+        font-size: 20px;
+        margin: 0 auto 50px;
+    }
+
+    > .posts {
+        display: inline-block;
+    }
+
+    > .posts .post {
+        margin-top: 20px;
+        display: inline-block;
+
+        h2 {
+            font-size: 24px;
+            text-decoration: underline;
+        }
+
+        div {
+            max-width: 30%;
+            min-width: 300px;
+            min-height: 300px;
+            width: 100%;
+            margin: 10px 10px;
+            background-color: $greyish;
+        }
+    }
+
+    > h1, .posts .post div {
+        border-radius: 30px;
+        border-width: 2px;
+        padding: 18px 10px;
+    }
+}
