@@ -1,0 +1,13 @@
+.bg {
+    position: fixed;
+    top: 0;
+    border: 3px solid lightgreen;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+    background-image: url('/images/bg3.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}

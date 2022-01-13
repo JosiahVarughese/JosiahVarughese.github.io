@@ -1,4 +1,5 @@
 #main {
+
     margin-top: 300px;
 
     > h1 {
@@ -9,13 +10,21 @@
         margin: 0 auto 50px;
     }
 
-    > .posts {
-        display: inline-block;
-    }
-
     > .posts .post {
-        margin-top: 20px;
-        display: inline-block;
+        padding: 10px;
+        margin: 0 auto 20px;
+        width: 80%;
+
+        @include breakpoint-up(medium) {
+            display: inline-block;
+            width: 50%;
+        }
+
+        @include breakpoint-up(large) {
+            margin: 0 0 20px;
+            display: inline-block;
+            width: 400px;
+        }
 
         h2 {
             font-size: 24px;
@@ -23,17 +32,21 @@
         }
 
         div {
-            max-width: 30%;
-            min-width: 300px;
-            min-height: 300px;
-            width: 100%;
-            margin: 10px 10px;
             background-color: $greyish;
+            height: 500px;
+
+            @include breakpoint-up(medium) {
+                height: 340px;
+            }
+
+            @include breakpoint-up(large) {
+                height: 300px;
+            }
         }
     }
 
     > h1, .posts .post div {
-        border-radius: 30px;
+        border-radius: 10px;
         border-width: 2px;
         padding: 18px 10px;
     }

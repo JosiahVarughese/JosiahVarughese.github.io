@@ -1,0 +1,70 @@
+@-ms-viewport {
+    width: device-width;
+}
+
+@include breakpoint-down('small') {
+    html, body {
+        min-width: 320px;
+    }
+}
+
+html {
+    font-size: 100%;
+    box-sizing: border-box;
+    background-color: magenta;
+}
+
+head {
+    display: none;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+    display: block;
+    margin: 0;
+    padding: 0;
+    border-width: 0;
+    border-style: solid;
+    border-color: $whitish;
+    text-align: center;
+    font-family:'Courier New', Courier, monospace;
+    justify-content: center;
+    color: $whitish;
+}
+
+body {
+    position: absolute;
+    -ms-overflow-style: scrollbar;
+}
+
+a, a:visited, a:hover {
+    text-decoration: none;
+}
+
+.container {
+    margin: 0 auto;
+    width: 100%;
+
+    @include breakpoint-up(medium) {
+        width: 94%;
+    }
+
+    @include breakpoint-up(large) {
+        width: 80%;
+    }
+    /*border-width: 0 3px;
+    border-style: solid;
+    border-color: blue;*/
+}
+
+.hide-for-mobile {
+    @include breakpoint-down(medium) {
+        display: none;
+    }
+}
+
+.hide-for-desktop {
+    @include breakpoint-up(large) {
+        display: none;
+    }
+}

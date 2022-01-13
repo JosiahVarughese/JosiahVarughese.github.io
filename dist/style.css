@@ -2,7 +2,14 @@
   width: device-width;
 }
 
+@media (max-width: 39.3975em) {
+  html, body {
+    min-width: 320px;
+  }
+}
+
 html {
+  font-size: 100%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   background-color: magenta;
@@ -12,26 +19,50 @@ head {
   display: none;
 }
 
-body {
-  -ms-overflow-style: scrollbar;
-  width: 100%;
-  height: 100%;
-}
-
-*, *:before, *:after {
+*, *::before, *::after {
   -webkit-box-sizing: inherit;
           box-sizing: inherit;
-  margin: 0 auto;
+  display: block;
+  margin: 0;
   padding: 0;
-  text-align: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  font-family: 'Courier New', Courier, monospace;
   border-width: 0;
   border-style: solid;
   border-color: white;
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   color: white;
+}
+
+body {
+  position: absolute;
+  -ms-overflow-style: scrollbar;
+}
+
+a, a:visited, a:hover {
+  text-decoration: none;
+}
+
+.container {
+  margin: 0 auto;
+  width: 100%;
+  /*border-width: 0 3px;
+    border-style: solid;
+    border-color: blue;*/
+}
+
+@media (min-width: 40em) {
+  .container {
+    width: 94%;
+  }
+}
+
+@media (min-width: 64em) {
+  .container {
+    width: 80%;
+  }
 }
 
 @media (max-width: 63.9375em) {
@@ -46,62 +77,56 @@ body {
   }
 }
 
-#wrapper {
-  position: relative;
-  z-index: 1;
-  overflow: hidden;
-}
-
-#wrapper > .bg {
-  position: absolute;
+.bg {
+  position: fixed;
   top: 0;
-  left: 0;
+  border: 3px solid lightgreen;
   width: 100%;
   height: 100%;
-  background-color: black;
-  background-image: url("/images/bg2.jpg");
-  background-size: 100% auto;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: scroll;
   z-index: -1;
-}
-
-#wrapper > .bg.fixed {
-  position: fixed;
-  width: 100vw;
-  height: 100vh;
+  overflow: hidden;
+  background-image: url("/images/bg3.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 header {
-  display: block;
+  position: fixed;
   width: 100%;
   height: 30%;
-  position: fixed;
-  padding: 20px 10px 20px;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(7, 21, 53, 0.579)), to(transparent));
-  background: linear-gradient(rgba(7, 21, 53, 0.579), transparent);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(65, 65, 65, 0.932)), to(transparent));
+  background: linear-gradient(rgba(65, 65, 65, 0.932), transparent);
+}
+
+.items {
+  height: 80px;
+  margin: 0 auto;
+  padding: 20px 10px;
 }
 
 .links {
-  display: inline;
   float: right;
   text-align: right;
 }
 
 .logo {
-  float: left;
   word-spacing: -4px;
+}
+
+@media (min-width: 64em) {
+  .logo {
+    float: left;
+  }
 }
 
 a {
   display: inline-block;
-  text-decoration: none;
-  font-size: 14px;
+  font-size: 28px;
   padding: 3px 8px;
   margin: 0 5px;
   border-width: 1.5px;
-  border-radius: 15px;
+  border-radius: 10px;
 }
 
 #main {
@@ -118,13 +143,25 @@ a {
   margin: 0 auto 50px;
 }
 
-#main > .posts {
-  display: inline-block;
+#main > .posts .post {
+  padding: 10px;
+  margin: 0 auto 20px;
+  width: 80%;
 }
 
-#main > .posts .post {
-  margin-top: 20px;
-  display: inline-block;
+@media (min-width: 40em) {
+  #main > .posts .post {
+    display: inline-block;
+    width: 50%;
+  }
+}
+
+@media (min-width: 64em) {
+  #main > .posts .post {
+    margin: 0 0 20px;
+    display: inline-block;
+    width: 400px;
+  }
 }
 
 #main > .posts .post h2 {
@@ -133,16 +170,24 @@ a {
 }
 
 #main > .posts .post div {
-  max-width: 30%;
-  min-width: 300px;
-  min-height: 300px;
-  width: 100%;
-  margin: 10px 10px;
-  background-color: #447379;
+  background-color: #cccccc;
+  height: 500px;
+}
+
+@media (min-width: 40em) {
+  #main > .posts .post div {
+    height: 340px;
+  }
+}
+
+@media (min-width: 64em) {
+  #main > .posts .post div {
+    height: 300px;
+  }
 }
 
 #main > h1, #main .posts .post div {
-  border-radius: 30px;
+  border-radius: 10px;
   border-width: 2px;
   padding: 18px 10px;
 }

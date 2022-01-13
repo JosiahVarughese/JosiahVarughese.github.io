@@ -1,30 +1,36 @@
 header {
-    display: block;
+    position: fixed;
     width: 100%;
     height: 30%;
-    position: fixed;
-    padding: 20px 10px 20px;
     background: linear-gradient($darkBlurpleTransparent, transparent);
 }
 
+.items {
+    height: 80px;
+    margin: 0 auto;
+    padding: 20px 10px;
+}
+
 .links {
-    display: inline;
+    //display: inline;
     float: right;
     text-align: right;
 }
 
 .logo {
-    float: left;
     word-spacing: -4px;
+
+    @include breakpoint-up(large) {
+        float: left;
+    }
 }
 
 a {
     display: inline-block;
-    text-decoration: none;
-    font-size: 14px;
+    font-size: 28px;
     //font-weight: bold;
     padding: 3px 8px;
     margin: 0 5px;
     border-width: 1.5px;
-    border-radius: 15px;
+    border-radius: 10px;
 }
