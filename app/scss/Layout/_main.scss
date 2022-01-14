@@ -10,6 +10,21 @@
         margin: 0 auto 50px;
     }
 
+    .posts {
+      text-align: left;
+      margin: 0 auto;
+      width: 400px;
+      @include breakpoint-up(medium) {
+        width: 800px;
+      }
+      @include breakpoint-up(large) {
+        width: 1200px;
+      }
+      @include breakpoint-up(xlarge) {
+        width: auto;
+      }
+    }
+
     > .posts .post {
         padding: 10px;
         margin: 0 auto 20px;
@@ -32,8 +47,8 @@
         }
 
         div {
-            background-color: $greyish;
-            height: 500px;
+            background-color: $grey;
+            height: 300px;
 
             @include breakpoint-up(medium) {
                 height: 340px;
