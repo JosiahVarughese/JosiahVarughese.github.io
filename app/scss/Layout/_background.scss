@@ -1,14 +1,43 @@
 .bg {
     position: fixed;
     top: 0;
-    border: 3px solid lightgreen;
+    //border: 3px solid lightgreen;
     width: 100%;
     height: 100%;
     z-index: -1;
     overflow: hidden;
     background-color: black;
-    background-image: url('/images/bg3.JPG');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-image:
+      linear-gradient(to bottom, $bgGradient, transparent),
+      url('/images/bg4.JPG');
+    @include breakpoint-up(large) {
+      background-image:
+      linear-gradient(to right, $bgGradient, transparent),
+      linear-gradient(to left, $bgGradient, transparent),
+      url('/images/bg4.JPG');
+    }
+    background-position: 
+      center;
+    background-size:
+      cover;
+    background-repeat:
+      no-repeat;
+
+}
+
+#wrapper {
+  width: 90%;
+  font-size: 0;
+  margin: 0 auto;
+  height: 100%;
+  border-width: 0 1px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  padding: 10px;
+  @include breakpoint-up(medium) {
+    width: 80%;
+    padding: 30px;
+    grid-template-columns: min-content 1fr;
+  }
 }

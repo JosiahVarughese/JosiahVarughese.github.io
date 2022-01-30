@@ -1,68 +1,47 @@
 #main {
+  background-color: $grey;
+  padding: 30px;
 
-    margin-top: 300px;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
 
-    > h1 {
-        width: 80%;
-        max-width: max-content;
-        font-weight: bold;
-        font-size: 20px;
-        margin: 0 auto 50px;
+  > p {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 16px;
+    line-height: 2;
+  }
+
+  > .image {
+    width: 180px;
+    height: 180px;
+    margin: 0 auto 20px;
+    background-image: url('/images/aboutMe.JPG');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 50%; 
+  }
+
+  @include breakpoint-up(medium) {
+    position: static;
+    flex: 1;
+    padding: 50px;
+    margin: 10px;
+    grid-column-start: 2;
+    grid-column-end: 3;
+
+    > p {
+      font-size: 18px;
+      line-height: 2.2;
     }
 
-    .posts {
-      text-align: left;
-      margin: 0 auto;
-      width: 400px;
-      @include breakpoint-up(medium) {
-        width: 800px;
-      }
-      @include breakpoint-up(large) {
-        width: 1200px;
-      }
-      @include breakpoint-up(xlarge) {
-        width: auto;
-      }
+    > .image {
+      width: 250px;
+      height: 250px;
     }
+  }
 
-    > .posts .post {
-        padding: 10px;
-        margin: 0 auto 20px;
-        width: 80%;
-
-        @include breakpoint-up(medium) {
-            display: inline-block;
-            width: 50%;
-        }
-
-        @include breakpoint-up(large) {
-            margin: 0 0 20px;
-            display: inline-block;
-            width: 400px;
-        }
-
-        h2 {
-            font-size: 24px;
-            text-decoration: underline;
-        }
-
-        div {
-            background-color: $grey;
-            height: 300px;
-
-            @include breakpoint-up(medium) {
-                height: 340px;
-            }
-
-            @include breakpoint-up(large) {
-                height: 300px;
-            }
-        }
-    }
-
-    > h1, .posts .post div {
-        border-radius: 10px;
-        border-width: 2px;
-        padding: 18px 10px;
-    }
+  @include breakpoint-up(large) {
+  }
 }

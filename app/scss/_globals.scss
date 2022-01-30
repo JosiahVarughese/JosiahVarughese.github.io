@@ -28,34 +28,34 @@ head {
     border-style: solid;
     border-color: $white;
     text-align: center;
-    font-family:'Courier New', Courier, monospace;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     justify-content: center;
     color: $white;
 }
 
+script {
+  display: none;
+}
+
 body {
     position: absolute;
+    width: 100vw;
+    height: 100vh;
     -ms-overflow-style: scrollbar;
+    overflow: hidden;
 }
 
 a, a:visited, a:hover {
     text-decoration: none;
 }
 
-.container {
-    margin: 0 auto;
-    width: 100%;
+a {
+  background-color: transparent;
+  transition: background-color 300ms ease-in-out;
+}
 
-    @include breakpoint-up(medium) {
-        width: 94%;
-    }
-
-    @include breakpoint-up(large) {
-        width: 80%;
-    }
-    /*border-width: 0 3px;
-    border-style: solid;
-    border-color: blue;*/
+.links a:hover {
+  background-color: $highlight;
 }
 
 .hide-for-mobile {

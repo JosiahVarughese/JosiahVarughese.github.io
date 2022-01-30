@@ -1,36 +1,36 @@
 header {
-    position: fixed;
-    width: 100%;
-    height: 30%;
-    background: linear-gradient($darkGrey, transparent);
-}
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  text-align: center;
+  font-size: 0;
+  height: 100%;
+  width: min-content;
+  margin: 0 auto;
 
-.items {
-    height: 80px;
-    margin: 0 auto;
-    padding: 20px 10px;
+  @include breakpoint-up(medium) {
+    float: left;
+    text-align: left;
+    margin: 0 30px 0 0;
+  }
 }
 
 .links {
-    //display: inline;
-    float: right;
-    text-align: right;
-}
+  font-size: 0;
 
-.logo {
-    word-spacing: -4px;
+  > a {
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    font-size: 12px;
+    margin: 0 auto 30px;
+    padding: 48px 24px;
+    border-width: 1px;
+    border-radius: 8px;
 
     @include breakpoint-up(large) {
-        float: left;
+      text-align: left;
     }
-}
-
-a {
-    display: inline-block;
-    font-size: 28px;
-    //font-weight: bold;
-    padding: 3px 8px;
-    margin: 0 5px;
-    border-width: 1.5px;
-    border-radius: 10px;
+    
+  }
 }
