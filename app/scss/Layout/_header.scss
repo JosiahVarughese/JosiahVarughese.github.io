@@ -11,26 +11,33 @@ header {
   @include breakpoint-up(medium) {
     float: left;
     text-align: left;
-    margin: 0 30px 0 0;
+    margin: 0 20px 0 10px;
   }
-}
 
-.links {
-  font-size: 0;
+  > h3 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    padding: 0 10px 30px;
+    text-decoration: underline;
+  }
 
-  > a {
-    text-align: center;
-    text-transform: uppercase;
-    letter-spacing: 6px;
-    font-size: 12px;
-    margin: 0 auto 30px;
-    padding: 48px 24px;
-    border-width: 1px;
-    border-radius: 8px;
-
-    @include breakpoint-up(large) {
-      text-align: left;
+  > .links {
+    font-size: 0;
+  
+    > a {
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 6px;
+      font-size: 12px;
+      margin: 0 auto 30px;
+      padding: 48px 24px;
+      border-width: 1px;
+      border-radius: 8px;
+  
+      @include breakpoint-up(large) {
+        text-align: left;
+      }
+      
     }
-    
   }
 }

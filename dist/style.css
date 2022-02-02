@@ -102,7 +102,7 @@ html {
   font-size: 100%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  background-color: magenta;
+  background-color: black;
   z-index: -10;
 }
 
@@ -149,8 +149,8 @@ a {
   transition: background-color 300ms ease-in-out;
 }
 
-.links a:hover {
-  background-color: rgba(255, 255, 255, 0.489);
+a:hover {
+  background-color: rgba(255, 255, 255, 0.259);
 }
 
 @media (max-width: 63.9375em) {
@@ -159,7 +159,7 @@ a {
   }
 }
 
-@media (min-width: 64em) {
+@media (min-width: 40em) {
   .hide-for-desktop {
     display: none;
   }
@@ -188,24 +188,25 @@ a {
 }
 
 #wrapper {
-  width: 90%;
-  font-size: 0;
-  margin: 0 auto;
-  height: 100%;
-  border-width: 0 1px;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
-  -ms-grid-rows: 1fr;
-      grid-template-rows: 1fr;
-  padding: 10px;
+  -ms-grid-rows: minmax(100%, 1fr);
+      grid-template-rows: minmax(100%, 1fr);
+  overflow: hidden;
+  width: 92%;
+  height: 100%;
+  font-size: 0;
+  padding: 50px 0;
+  margin: 0 auto;
+  border-width: 0 1px;
 }
 
 @media (min-width: 40em) {
   #wrapper {
     width: 80%;
-    padding: 30px;
+    padding: 60px 30px;
     -ms-grid-columns: min-content 1fr;
         grid-template-columns: -webkit-min-content 1fr;
         grid-template-columns: min-content 1fr;
@@ -231,15 +232,22 @@ header {
   header {
     float: left;
     text-align: left;
-    margin: 0 30px 0 0;
+    margin: 0 20px 0 10px;
   }
 }
 
-.links {
+header > h3 {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 18px;
+  padding: 0 10px 30px;
+  text-decoration: underline;
+}
+
+header > .links {
   font-size: 0;
 }
 
-.links > a {
+header > .links > a {
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 6px;
@@ -251,57 +259,186 @@ header {
 }
 
 @media (min-width: 64em) {
-  .links > a {
+  header > .links > a {
     text-align: left;
   }
 }
 
 #main {
-  background-color: #363636;
-  padding: 30px;
   -ms-grid-column: 1;
       grid-column-start: 1;
   grid-column-end: 2;
   -ms-grid-row: 1;
       grid-row-start: 1;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 30px 1fr 30px;
+      grid-template-columns: 30px 1fr 30px;
+  -ms-grid-rows: 50px minmax(calc(100% - 50px), 1fr);
+      grid-template-rows: 50px minmax(calc(100% - 50px), 1fr);
+  border-radius: 15px;
+  background-color: rgba(61, 61, 61, 0.952);
+  overflow: hidden;
 }
 
-#main > p {
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+#main > .header {
+  -ms-grid-row: 1;
+      grid-row-start: 1;
+  grid-row-end: 2;
+  padding: 15px 5px 10px;
+  margin-bottom: 5px;
+}
+
+#main > .back {
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: 2;
+  text-align: right;
+  font-size: 15px;
+}
+
+#main > .content-title {
+  -ms-grid-column: 2;
+      grid-column-start: 2;
+  grid-column-end: 3;
+  text-align: center;
+  font-weight: normal;
   font-size: 16px;
-  line-height: 2;
+  letter-spacing: 16px;
 }
 
-#main > .image {
+#main > .left {
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: 2;
+  -ms-grid-row: 2;
+      grid-row-start: 2;
+  grid-row-end: 3;
+  border-radius: 15px 0 0 15px;
+}
+
+#main > .right {
+  -ms-grid-column: 3;
+      grid-column-start: 3;
+  grid-column-end: 4;
+  -ms-grid-row: 2;
+      grid-row-start: 2;
+  grid-row-end: 3;
+  border-radius: 0 15px 15px 0;
+}
+
+#main > .scrollable {
+  -ms-grid-column: 2;
+      grid-column-start: 2;
+  grid-column-end: 3;
+  -ms-grid-row: 2;
+      grid-row-start: 2;
+  grid-row-end: 3;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+  overflow: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  height: calc(100% - 14px);
+  padding: 10px 0;
+  margin: 0 5px;
+  border-color: rgba(255, 255, 255, 0.259);
+  border-style: dashed;
+  border-width: 1px 0;
+}
+
+#main > .scrollable::-webkit-scrollbar {
+  display: none;
+}
+
+#main > .scrollable > section {
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: 2;
+  -ms-grid-row: 1;
+      grid-row-start: 1;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+}
+
+#main > .scrollable > section > p {
+  font-family: sans-serif;
+  text-align: left;
+  font-size: 14px;
+  line-height: 2;
+  padding: 0 12px;
+  margin: 25px 0;
+  border-color: rgba(255, 255, 255, 0.259);
+  border-style: dashed;
+  border-left-width: 1px;
+}
+
+#main > .scrollable > section > p > .br {
+  font-size: 0px;
+  margin-bottom: 10px;
+}
+
+#main > .scrollable > section > .image {
   width: 180px;
   height: 180px;
-  margin: 0 auto 20px;
+  margin: 0 auto 18px;
+  border-radius: 50%;
   background-image: url("/images/aboutMe.JPG");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  border-radius: 50%;
 }
 
 @media (min-width: 40em) {
   #main {
     position: static;
-    -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
-    padding: 50px;
     margin: 10px;
     -ms-grid-column: 2;
         grid-column-start: 2;
     grid-column-end: 3;
+    -ms-grid-columns: 60px 1fr 60px;
+        grid-template-columns: 60px 1fr 60px;
   }
-  #main > p {
-    font-size: 18px;
+  #main > .content-title {
+    font-size: 24px;
+    letter-spacing: 18px;
+  }
+  #main > .scrollable > section p {
+    text-align: center;
+    font-size: 16px;
     line-height: 2.2;
+    padding: 0 20px;
+    margin: 40px 0;
   }
-  #main > .image {
+  #main > .scrollable > section .image {
     width: 250px;
     height: 250px;
+  }
+}
+
+@media (min-width: 64em) {
+  #main {
+    -ms-grid-rows: 70px minmax(calc(100% - 70px), 1fr);
+        grid-template-rows: 70px minmax(calc(100% - 70px), 1fr);
+  }
+  #main > .content-title {
+    text-align: left;
+    font-size: 30px;
+    letter-spacing: 18px;
+  }
+  #main > .scrollable p {
+    text-align: left;
+    padding: 0 30px;
+  }
+  #main > .scrollable .image {
+    width: 350px;
+    height: 350px;
+    margin: 0 10px 70px;
   }
 }
 /*# sourceMappingURL=style.css.map */
